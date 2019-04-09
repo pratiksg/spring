@@ -11,32 +11,35 @@ public class Organization
 	private String orgName;
 	private double marketPrice;
 	private Address address;
-	private List<String> directors;
+	private Properties databaseDetails;
+	/*private List<String> directors;
 	private Set<String> branches;
 	private Map<String, String> branchWiseHead;
 	private Properties ipAddresses;
 	private Properties databaseDetails;
-	
+	*/
 	public Organization() 
 	{
 		super();
 		
 	}
 
-	public Organization(int orgId, String orgName, double marketPrice,Address address ,List<String> directors,
+	public Organization(int orgId, String orgName, double marketPrice, Address address,Properties databaseDetails)/* List<String> directors,
 			Set<String> branches, Map<String, String> branchWiseHead, Properties ipAddresses,
-			Properties databaseDetails) 
+			Properties databaseDetails*/ 
 	{
 		super();
 		this.orgId = orgId;
 		this.orgName = orgName;
 		this.marketPrice = marketPrice;
 		this.address = address;
-		private List<String> directors;
-		private Set<String> branches;
-		private Map<String, String> branchWiseHead;
-		private Properties ipAddresses;
-		private Properties databaseDetails;
+		this.databaseDetails = databaseDetails;
+		/*this.directors = directors;
+		this.branches = branches;
+		this.branchWiseHead = branchWiseHead;
+		this.ipAddresses = ipAddresses;
+		this.databaseDetails = databaseDetails;
+		*/
 	}
 
 	public int getOrgId() 
@@ -80,6 +83,19 @@ public class Organization
 		this.address = address;
 	}
 
+	public Properties getDatabaseDetails() 
+	{
+		return databaseDetails;
+	}
+
+	public void setDatabaseDetails(Properties databaseDetails) 
+	{
+		this.databaseDetails = databaseDetails;
+	}
+	
+
+
+	/*
 	public List<String> getDirectors() 
 	{
 		return directors;
@@ -120,22 +136,16 @@ public class Organization
 		this.ipAddresses = ipAddresses;
 	}
 
-	public Properties getDatabaseDetails() 
-	{
-		return databaseDetails;
-	}
-
-	public void setDatabaseDetails(Properties databaseDetails) 
-	{
-		this.databaseDetails = databaseDetails;
-	}
-
+	
+	*/
 	@Override
 	public String toString() 
 	{
 		return "Organization [orgId=" + orgId + ", orgName=" + orgName + ", marketPrice=" + marketPrice + ", address="
-				+ address + ", directors=" + directors + ", branches=" + branches + ", branchWiseHead=" + branchWiseHead
+				+ address + ",  databaseDetails=" + databaseDetails + "]";
+	/* directors=" + directors + ", branches=" + branches + ", branchWiseHead=" + branchWiseHead
 				+ ", ipAddresses=" + ipAddresses + ", databaseDetails=" + databaseDetails + "]";
+	*/
 	}
 
 	

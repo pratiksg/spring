@@ -1,8 +1,13 @@
 package com.capgemini.spring.model;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Address 
 {
+	@Value("Satara")
 	private String city;
+	@Value("Maharashtra")
 	private String state;
 	
 	public Address() 
